@@ -17,12 +17,3 @@ void regis () {
     fclose(fpw);
 }
 
-void teslogin(){
-    FILE *fpr;
-
-    if ((fpr = fopen("database/login.bin", "rb"))== NULL){
-        printf("gagal membuka file !");
-        return EXIT_FAILURE;
-    }
-}
-     
