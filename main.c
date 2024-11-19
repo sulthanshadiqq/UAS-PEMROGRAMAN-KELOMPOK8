@@ -1,37 +1,70 @@
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
-#include <conio.h>
-#include <windows.h>
+#include <direct.h> 
+#include <io.h> 
+#include <unistd.h>
+#include <sys/stat.h>
+#include <sys/types.h> 
+#
 
-char login[20];
-
-typedef struct peserta{
+typedef struct peserta {
     char username[50];
-    int password [50];
+    char password[50]; 
+} pengguna;
+pengguna user;
 
 
-}file;
-file reg;
 
-typedef struct leaderboard{
-    char uname;
-    int score;
-}leader;
-leader papan;
+void cekdanmembuatFolder(const char *namaFolder) {
+    // Mengecek apakah direktori sudah ada
+    
+    if (_access(namaFolder, 0) == 0) {
+        printf(" folder '%s' sudah ada.\n", namaFolder);
+    } else {
+        // Jika direktori tidak ada, buat direktori baru
+        if (_mkdir(namaFolder) == 0) {
+            printf("folder '%s' berhasil dibuat.\n", namaFolder);
+        } else {
+            perror("Gagal membuat folder");
+        }
+    }
+}
 
-void regis () {
-    FILE *fpw, *fpw1 = fopen("database/login.bin", "wb");
-    fpw=fopen("b.txt", "ab");
-    fpw1=fopen("p.txt", "a");
-    printf("Masukkan username :-\t");
-    scanf("%s",reg.username );  
-    strcpy(papan.uname, reg.username);
-    fprintf(fpw1,"%s", papan.uname);
-    printf("Masuukan password:-\t");
-    fflush(stdin);
-    scanf("%s", reg.password);
-    fwrite(&regis,sizeof(regis),1,fpw);
-    fclose(fpw);
-    fclose(fpw1);
+void registrasiuser(){
+    FILE *registrasi;
+
+    registrasi=fopen("database/login.bin", "wb");
+    if (registrasi == NULL) {
+        printf("Gagal membuat file.\n");
+        exit(1);}
+
+    printf("--------registrasi--------");
+    printf("masukkan username");
+    scanf("%s",user.username);
+    printf("masukkan password");
+    scanf("%s", user.password);
+
+    fwrite(&user, sizeof(pengguna), 1, registrasi);
+    fclose(registrasi);
+
+    printf("BERHASIL!, SILAHKAN LOGIN.\n");
+}
+
+
+int loginuser(char *username, char *password){
+    FILE *login;
+
+    login=fopen("database/login.bin", "rb");
+    if (login == NULL) {
+        printf("Username dan password tidak valid! Silakan registrasi terlebih dahulu.\n");
+        exit(1);}
+
+        fread(&user, sizeof(pengguna),1,login);
+        fclose(login);
+
+        if (strcmp(user.username,username)== 0 && strcmp(user.password, password) == 0) {
+        return 1; // login berhasil
+    }
+    return 0; //login gagal
 }
