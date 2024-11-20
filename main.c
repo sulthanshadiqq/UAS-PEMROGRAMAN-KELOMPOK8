@@ -71,3 +71,57 @@ int loginuser(char *username, char *password) {
     fclose(login);
     return 0;  // login gagal
 }
+
+void soal_mudah(){
+    int total_score = 0;
+    char jawaban;
+
+    //soal 1
+    printf ("\nDi provinsi manakah pulau komodo terletak?\n");
+    printf ("A. NTB\n");
+    printf ("B. Jawa Barat\n");
+    printf ("C. NTT\n");
+    printf ("D. Bali\n");
+    printf (Pilih jawaban (A/B/C/D) : ");
+    scanf ("%c", &jawaban);
+    getchar(); // membaca atau membuang karakter yang tidak dibutuhkan
+    if (jawaban == 'C'){
+        print ("jawaban anda benar!\n");
+        total_score += 100;
+    } 
+    else {
+        printf ("jawaban anda salah\n");
+
+    //soal 2
+    printf ("\nApa julukan terkenal dari negara Korea Selatan?\n");
+    printf ("A. Negeri Tirai Bambu\n");
+    printf ("B. Negeri Kincir Angin\n");
+    printf ("C. Zamrud Khatulistiwa\n");
+    printf ("D. Negeri Gingseng\n");
+    printf ("Pilih jawaban (A/B/C/D) : ");
+    scanf ("%c", &jawaban);
+    getchar();
+    if (jawaban == 'D'){
+        printf ("jawaban anda benar!\n");
+        total_score += 100;
+    }
+    else {
+        printf ("jawaban anda salah");
+
+    //soal 3
+    printf ("\nNegara manakah yang dijuluki Negara Gajah Putih?\n");
+    printf ("A. Vietnam\n");
+    printf ("B. Thailand\n");
+    printf ("C. Brunei Darussalam\n");
+    printf ("D. Myanmar\n");
+    printf ("Pilih jawaban (A/B/C/D) : ");
+    scanf ("%c", &jawaban);
+    getchar();
+    if (jawaban == 'B'){
+        printf ("jawaban anda benar!\n");
+        total_score += 100;
+    }
+    else {
+        printf ("jawaban anda salah\n");
+
+        
