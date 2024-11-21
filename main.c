@@ -76,13 +76,17 @@ void soal_mudah(){
     int total_score = 0;
     char jawaban;
 
+    printf ("\n*easy level*\n");
+    printf ("---Selamat bermain!!---\n");
+
     //soal 1
-    printf ("\nDi provinsi manakah pulau komodo terletak?\n");
+    printf ("\n-----Pertanyaan Pertama-----\n");
+    printf ("Di provinsi manakah pulau komodo terletak?\n");
     printf ("A. NTB\n");
     printf ("B. Jawa Barat\n");
     printf ("C. NTT\n");
     printf ("D. Bali\n");
-    printf (Pilih jawaban (A/B/C/D) : ");
+    printf ("Pilih jawaban (A/B/C/D) : ");
     scanf ("%c", &jawaban);
     getchar(); // membaca atau membuang karakter yang tidak dibutuhkan
     if (jawaban == 'C'){
@@ -91,9 +95,11 @@ void soal_mudah(){
     } 
     else {
         printf ("jawaban anda salah\n");
+    }
 
     //soal 2
-    printf ("\nApa julukan terkenal dari negara Korea Selatan?\n");
+    printf ("\n-----Pertanyaan Kedua-----\n");
+    printf ("Apa julukan terkenal dari negara Korea Selatan?\n");
     printf ("A. Negeri Tirai Bambu\n");
     printf ("B. Negeri Kincir Angin\n");
     printf ("C. Zamrud Khatulistiwa\n");
@@ -107,9 +113,11 @@ void soal_mudah(){
     }
     else {
         printf ("jawaban anda salah");
+    }
 
     //soal 3
-    printf ("\nNegara manakah yang dijuluki Negara Gajah Putih?\n");
+    printf ("\n-----Pertanyaan Ketiga-----\n");
+    printf ("Negara manakah yang dijuluki Negara Gajah Putih?\n");
     printf ("A. Vietnam\n");
     printf ("B. Thailand\n");
     printf ("C. Brunei Darussalam\n");
@@ -123,5 +131,51 @@ void soal_mudah(){
     }
     else {
         printf ("jawaban anda salah\n");
+    }
+
+    //soal 4
+    printf ("\n-----Pertanyaan Keempat-----\n");
+    printf ("Benua manakah yang dijuluki Benua biru?\n");
+    printf ("A. Eropa\n");
+    printf ("B. Antartika\n");
+    printf ("C. Australia\n");
+    printf ("D. Amerika\n");
+    printf ("Pilih jawaban (A/B/C/D) : ");
+    scanf ("%c", &jawaban);
+    getchar();
+    if (jawaban == 'A'){
+        printf ("jawaban anda benar!\n");
+        total_score += 100;
+    }
+    else {
+        printf ("jawaban anda salah\n");
+    }
+
+    //soal 5
+    printf ("-----Pertanyaan Kelima-----\n");
+    printf ("\nApa nama bunga nasional Indonesia\n");
+    printf ("A. Raflesia Arnoldi\n");
+    printf ("B. Kenanga\n");
+    printf ("C. Tulip\n");
+    printf ("D. Melati\n");
+    printf ("Pilih jawaban (A/B/C/D) : ");
+    scanf ("%c", &jawaban);
+    getchar();
+    if (jawaban == 'D') {
+        printf ("jawaban anda benar!\n");
+        total_score += 100;
+    }
+    else {
+        printf ("jwaban anda salah\n");
+    }
+
+    //menampilkan hasil akhir
+    printf ("Selamat yaa\n");
+    printf ("Point akhir anda : %d point.\n", total_score);
+    printf ("\nTerima Kasih sudah bermain!!\n");
+}
+    
+
+
 
         
