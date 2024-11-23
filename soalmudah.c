@@ -97,7 +97,7 @@ void soal_mudah(){
     }
 
     //menampilkan hasil akhir
-    printf ("Selamat yaa\n");
+    printf ("Kuis telah selesai\n");
     printf ("Point akhir anda : %d point.\n", total_score);
     printf ("\nTerima Kasih sudah bermain!!\n");
 }
