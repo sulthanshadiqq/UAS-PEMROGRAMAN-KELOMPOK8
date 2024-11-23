@@ -38,7 +38,7 @@ void registrasiuser() {
         printf("Gagal membuka file database.\n");
         exit(1);
     }
-
+    printf("\n  === PROYEK PRAKTIKUM PEMROGRAMAN KELOMPOK 8  ===\n\n\n\n");
     printf("-------- Registrasi --------\n");
     printf("Masukkan username: ");
     scanf("%s", user.username);
