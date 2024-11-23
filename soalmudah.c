@@ -21,7 +21,7 @@ void soal_mudah(){
         total_score += 100;
     } 
     else {
-        printf ("jawaban anda salah\n");
+        printf ("jawaban anda salah.\n");
     }
 
     //soal 2
@@ -39,7 +39,7 @@ void soal_mudah(){
         total_score += 100;
     }
     else {
-        printf ("jawaban anda salah");
+        printf ("jawaban anda salah.\n");
     }
 
     //soal 3
@@ -57,7 +57,7 @@ void soal_mudah(){
         total_score += 100;
     }
     else {
-        printf ("jawaban anda salah\n");
+        printf ("jawaban anda salah.\n");
     }
 
     //soal 4
@@ -75,7 +75,7 @@ void soal_mudah(){
         total_score += 100;
     }
     else {
-        printf ("jawaban anda salah\n");
+        printf ("jawaban anda salah.\n");
     }
 
     //soal 5
@@ -93,11 +93,11 @@ void soal_mudah(){
         total_score += 100;
     }
     else {
-        printf ("jwaban anda salah\n");
+        printf ("jwaban anda salah.\n");
     }
 
     //menampilkan hasil akhir
-    printf ("Kuis telah selesai\n");
+    printf ("\nKuis telah selesai\n");
     printf ("Point akhir anda : %d point.\n", total_score);
     printf ("\nTerima Kasih sudah bermain!!\n");
 }
