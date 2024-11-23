@@ -79,7 +79,7 @@ void soal_mudah(){
     char jawaban;
 
     printf ("\n*easy level*\n");
-    printf ("---Selamat bermain!!---\n");
+    printf ("\n---Selamat bermain!!---\n");
 
     //soal 1
     printf ("\n=====Soal 1=====\n");
@@ -96,7 +96,7 @@ void soal_mudah(){
         total_score += 100;
     } 
     else {
-        printf ("jawaban anda salah\n");
+        printf ("jawaban anda salah.\n");
     }
 
     //soal 2
@@ -114,7 +114,7 @@ void soal_mudah(){
         total_score += 100;
     }
     else {
-        printf ("jawaban anda salah");
+        printf ("jawaban anda salah.\n");
     }
 
     //soal 3
@@ -132,7 +132,7 @@ void soal_mudah(){
         total_score += 100;
     }
     else {
-        printf ("jawaban anda salah\n");
+        printf ("jawaban anda salah.\n");
     }
 
     //soal 4
@@ -150,7 +150,7 @@ void soal_mudah(){
         total_score += 100;
     }
     else {
-        printf ("jawaban anda salah\n");
+        printf ("jawaban anda salah.\n");
     }
 
     //soal 5
@@ -168,7 +168,7 @@ void soal_mudah(){
         total_score += 100;
     }
     else {
-        printf ("jwaban anda salah\n");
+        printf ("jawaban anda salah.\n");
     }
 
     //menampilkan hasil akhir
